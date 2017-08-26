@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Info Enter!"
 date:   2017-08-20 08:18:10 -0300
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, temporibus, optio. Ducimus accusamus animi distinctio expedita, vel delectus quos nostrum vero praesentium commodi maiores. Sunt illum aliquid porro nostrum repellat.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eveniet, cumque pariatur. Numquam, in dignissimos eaque provident eius ipsa cupiditate mollitia amet eveniet voluptate itaque! Adipisci, dolorum aperiam quas quod.
 
-Jekyll also offers powerful support for code snippets:
+
 
 {% highlight ruby %}
 def print_hi(name)
@@ -18,8 +18,8 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Check out the [Info Enter docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Info Enter’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Info Enter Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+[jekyll-docs]: http://infoenter.com.br/
+[jekyll-gh]:   https://github.com/InfoEnter
+[jekyll-talk]: http://infoenter.com.br/
