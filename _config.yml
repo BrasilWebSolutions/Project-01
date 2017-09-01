@@ -27,6 +27,10 @@ github_username:  infoenter
 # Build settings
 markdown: kramdown
 
+
+#Os  permalinks são criados através de um modelo de URL onde os elementos dinâmicos são representados por palavras-chave com prefixo de dois pontos. 
+#O permalink padrão do modelo é /:categories/:year/:month/:day/:title.html . 
+#Cada uma das palavras-chave com prefixo de dois pontos é uma variável de modelo.
 # permalink: /:categories/:year/:month/:day/:title
 permalink: /:title
 
