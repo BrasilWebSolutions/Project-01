@@ -1,2 +1,2 @@
 # blog
-Info Enter
+Info Enter - site em construção
