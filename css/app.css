@@ -6,3 +6,18 @@
 .header ul{
 	padding-right: 20px;
 }
+
+.jumbotron {
+	background-image: url('../assets/images/bg.png');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	padding-top: 80px;
+	min-height: 720px;
+}
+
+.jumbotron .desc h1{
+	font-weight: 100;
+	line-height: 1.6;
+	font-size: 7.85rem;
+}
