@@ -34,3 +34,15 @@
 	max-width: 150%;
 	margin-top: 35px;
 }
+
+.text-white{
+	color: #FFFFFF;
+}
+
+/* .features{
+	margin-top: -20%;
+} */
+
+.features h2{
+	font-weight: 100; 
+}
