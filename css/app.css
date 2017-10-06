@@ -19,5 +19,18 @@
 .jumbotron .desc h1{
 	font-weight: 100;
 	line-height: 1.6;
-	font-size: 7.85rem;
+	font-size: 3.85rem;
+	color: #ffffff;
+	padding-top: 100px;
+}
+
+.jumbotron .desc h2{
+	font-weight: 100;
+	font-size: 2.85rem;
+	color: #ffffff;
+}
+
+.jumbotron .img-desc{
+	max-width: 150%;
+	margin-top: 35px;
 }
