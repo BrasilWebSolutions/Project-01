@@ -58,3 +58,11 @@
 .features h2{
 	font-weight: 100; 
 }
+
+.plans-prices{
+	background-image: url('../assets/images/bg.png');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	min-height: 100px;
+}
