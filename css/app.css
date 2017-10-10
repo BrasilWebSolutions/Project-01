@@ -36,7 +36,15 @@
 }
 
 .text-white{
-	color: #FFFFFF;
+	color: #FFFFFF !important;
+}
+
+.pad-section {
+	padding: 20px 0;
+}
+
+.pad-top-section{
+	padding-top: 20px;
 }
 
 /* .features{
