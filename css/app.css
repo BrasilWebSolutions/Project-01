@@ -8,7 +8,7 @@
 }
 
 .jumbotron {
-	background-image: url('../assets/images/bg.png');
+	background-image: url('../assets/images/6466.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: top;
@@ -60,9 +60,25 @@
 }
 
 .plans-prices{
-	background-image: url('../assets/images/bg.png');
+	background-image: url('../assets/images/5812.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: top;
 	min-height: 100px;
+}
+
+.footer{
+	padding: 10px;
+}
+
+.footer .row{
+	margin-bottom: 0 !important;
+}
+
+.footer .social .collection{
+	border: none;
+}
+
+.footer .social .collection .collection-item{
+	display: inline;
 }
