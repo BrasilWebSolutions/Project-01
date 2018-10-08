@@ -1,5 +1,1 @@
 # Info Enter 
-
-blog
-
-
