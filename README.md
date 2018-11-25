@@ -1,3 +1,3 @@
 # Info Enter 
 
-> Marketplace
+> Marketplace de Plugins para WordPress
