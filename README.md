@@ -1,3 +1,1 @@
-# Studio W3D
-
-> Marketplace de Plugins para WordPress
+# Brasil Web Solutions
