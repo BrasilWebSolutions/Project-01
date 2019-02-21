@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Site from "./Site";
 
 import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <h2>Blog Calc!</h2>
+      <Site />
     </div>
   );
 }
