@@ -15,16 +15,20 @@ class _HomeState extends State<Home> {
   TextEditingController weightController = TextEditingController();
   TextEditingController heightController = TextEditingController();
 
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   String _infoText = "Informe seus dados!";
 
   void _resetFields(){
     weightController.text = "";
     heightController.text = "";
-    _infoText = "Informe seus dados!";
+    setState(() {
+      _infoText = "Informe seus dados!";
+      _formKey = GlobalKey<FormState>();
+    });
   }
 
-
-  void calculate(){
+  void _calculate(){
     setState(() {
       double weight = double.parse(weightController.text);
       double height = double.parse(heightController.text) / 100;
@@ -45,7 +49,6 @@ class _HomeState extends State<Home> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,51 +62,71 @@ class _HomeState extends State<Home> {
             onPressed: _resetFields,
           )
         ],
-      ), //AppBar
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
-        child:  Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          // Ocupa toda a largura da coluna
-          children: <Widget>[
-            Icon(Icons.person_outline, size: 120.0, color: Colors.green),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Peso (kg)",
-                  labelStyle: TextStyle(color: Colors.green)), // InputDecoration
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.green, fontSize: 25.0),
-              controller: weightController,
-            ), // TextField
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Altura (cm)",
-                  labelStyle: TextStyle(color: Colors.green)), // InputDecoration
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.green, fontSize: 25.0),
-              controller: heightController,
-            ), // TextField
-            Padding(
-              padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
-              child: Container(
-                height: 50.0,
-                child: RaisedButton(
-                  onPressed: calculate,
-                  child: Text("Calcular", style: TextStyle(color: Colors.white, fontSize: 25.0),),
-                  color: Colors.green,
-                ), //RaisedButton,
-              ),//Container,
-            ),
-            Text( _infoText ,
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.green, fontSize: 25.0),
-            ) // Text
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Icon(Icons.person_outline, size: 120.0, color: Colors.green),
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    labelText: "Peso (kg)",
+                    labelStyle: TextStyle(color: Colors.green)),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.green, fontSize: 25.0),
+                controller: weightController,
+                validator: (value) {
+                  if(value.isEmpty){
+                    return "Insira seu Peso!";
+                  }
+                },
+              ),
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    labelText: "Altura (cm)",
+                    labelStyle: TextStyle(color: Colors.green)),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.green, fontSize: 25.0),
+                controller: heightController,
+                validator: (value) {
+                  if(value.isEmpty){
+                    return "Insira sua Altura!";
+                  }
+                },
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+                child: Container(
+                  height: 50.0,
+                  child: RaisedButton(
+                    onPressed: () {
+                      if(_formKey.currentState.validate()){
+                        _calculate();
+                      }
+                    },
+                    child: Text(
+                      "Calcular",
+                      style: TextStyle(color: Colors.white, fontSize: 25.0),
+                    ),
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+              Text(
+                _infoText,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.green, fontSize: 25.0),
+              )
+            ],
+          ),
         ),
-      )
-    ); // Scaffold
+      ),
+    );
   }
 }
